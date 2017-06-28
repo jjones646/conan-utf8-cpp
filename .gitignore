@@ -1,0 +1,62 @@
+# Compiler output files #
+###################
+*.a
+*.app
+*.dll
+*.dylib
+*.exe
+*.lai
+*.la
+*.lib
+*.lo
+*.out
+*.o
+*.obj
+*.slo
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio 2015 cache/options directory #
+##############################################
+.vs/
+
+# Build directory #
+###################
+[Bb]uild*/
+
+# Doxygen output #
+#######################
+/doc_html
+
+# Conan #
+#########
+__pycache__/
+*.py[cod]
+conanbuildinfo*.cmake
+conaninfo.txt
