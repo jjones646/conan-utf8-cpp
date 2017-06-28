@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION  3.0 )
 
-project( Utf8CppPackageTest
+project( Utf8PackageTest
          VERSION       0.0.1
          LANGUAGES     C  CXX
 )
@@ -15,9 +15,9 @@ set( CMAKE_CXX_EXTENSIONS  OFF )
 include( "${CMAKE_BINARY_DIR}/conanbuildinfo.cmake" )
 conan_basic_setup( TARGETS )
 
-add_executable( Utf8CppPackageTest
+add_executable( Utf8PackageTest
     main.cpp
 )
-target_link_libraries( Utf8CppPackageTest
-    PRIVATE  CONAN_PKG::utf8-cpp
+target_link_libraries( Utf8PackageTest
+    PRIVATE  CONAN_PKG::utf8
 )

@@ -2,8 +2,8 @@ import os
 from conans import ConanFile
 from conans.tools import download, check_sha256, unzip
 
-class Utf8CppConan(ConanFile):
-    name = 'utf8-cpp'
+class Utf8Conan(ConanFile):
+    name = 'utf8'
     version = '2.3.4'
     description = 'A portable UTF-8 C++ library'
     url = 'https://github.com/jjones646/conan-utf8-cpp'
@@ -22,7 +22,7 @@ class Utf8CppConan(ConanFile):
 
     def package(self):
         src_dir = 'utf8-cpp-{!s}'.format(self.version)
-        self.copy(pattern='*', src='{!s}/source'.format(src_dir), dst='include/utf8-cpp')
+        self.copy(pattern='*', src='{!s}/source'.format(src_dir), dst='include/utf8')
 
     def package_id(self):
         self.info.requires.clear()
