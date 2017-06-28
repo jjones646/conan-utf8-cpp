@@ -14,14 +14,15 @@ class Utf8CppConan(ConanFile):
         zip_name = os.path.basename(download_url)
         download(download_url, zip_name)
         check_sha256(zip_name, '450de5cf72fd3162aa191e089cccd0c0a49b95809a00f2993bb5d61b5676d8c1')
-        unzip(zip_name, 'utf8-cpp')
+        unzip(zip_name)
         os.unlink(zip_name)
 
     def build(self):
         return  # do nothing - header only
 
     def package(self):
-        self.copy(pattern='utf8-cpp/src/*', dst='include')
+        src_dir = 'utf8-cpp-{!s}'.format(self.version)
+        self.copy(pattern='*', src='{!s}/source'.format(src_dir), dst='include/utf8-cpp')
 
     def package_id(self):
         self.info.requires.clear()

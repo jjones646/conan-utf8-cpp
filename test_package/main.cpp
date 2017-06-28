@@ -1,5 +1,7 @@
 #include "utf8-cpp/utf8.h"
 #include <iostream>
+#include <string>
+#include <vector>
 
 int main()
 {
